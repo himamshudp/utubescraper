@@ -32,12 +32,12 @@ def y_scrap():
     chrome_options.add_argument("--no-sandbox")
     
     #forlocal machine
-    chromedriver = 'E://chromedriver.exe'
-    driver = webdriver.Chrome(executable_path=chromedriver, chrome_options=chrome_options)
+    #chromedriver = 'E://chromedriver.exe'
+    #driver = webdriver.Chrome(executable_path=chromedriver, chrome_options=chrome_options)
     
     #for cloud
-    #chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    #driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
     
     ######### To scroll bar automatically til end of page of you tube channel page #########
